@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>4A भविष्यवाणी</title>
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<style type="text/css">
+            
+		</style>
+		<script type="text/javascript">
+            $(function () {
+
+            $(document).ready(function () {
+
+                // Build the chart
+                $('#container').highcharts({
+                    chart: {
+                        plotBackgroundColor: null,
+                        plotBorderWidth: null,
+                        plotShadow: false
+                    },
+                    title: {
+                        text: 'Average Box Office Success with respect to Production Houses'
+                    },
+
+                    tooltip: {
+                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                    },
+                    plotOptions: {
+                        pie: {
+                            allowPointSelect: true,
+                            cursor: 'pointer',
+                            dataLabels: {
+                                enabled: false
+                            },
+                            showInLegend: true
+                        }
+                    },
+                    series: [{
+                        type: 'pie',
+                        name: 'Average Box Office Revenue',
+                        data: [
+                                  ["Archstone Distribution",1700  ],
+                                  ["Argot Pictures",2900  ],
+                                  ["N",6450  ],
+                                  ["Dada Films",6700  ],
+                                  ["Phase 4 Films",8500  ],
+                                  ["7A Productions",10900  ],
+                                  ["Naedomi Media",11100  ],
+                                  ["Cinema Libre",11500  ],
+                                  ["Stage 6",11600  ],
+                                  ["Maya Entertainment",13100  ],
+                                  ["Brainstorm Media",13700  ],
+                                  ["Gravitas Ventures",15400  ],
+                                  ["Magnet Releasing",15600  ],
+                                  ["HBO Documentary",17900  ],
+                                  ["Well Go USA",21750  ],
+                                  ["Cinema Purgatorio",22450  ],
+                                  ["Strand Releasing",22750  ],
+                                  ["Tribecca Film",28600  ],
+                                  ["Steelyard Pictures",30400  ],
+                                  ["Kristin Marie Productions",33300  ],
+                                  ["Swan Design Studios",35600  ],
+                                  ["Senator Entertainment",36900  ],
+                                  ["Metro-Goldwyn-Mayer Studios Inc.",38800  ],
+                                  ["Monterey Media",39020  ],
+                                  ["S2BN Films",47700  ],
+                                  ["Dark Sky Films",52600  ],
+                                  ["Kino Lorber",55570.57143  ],
+                                  ["Blue Sky Media",59100  ],
+                                  ["E1 Entertainment",59200  ],
+                                  ["Third Rail Releasing",59600  ],
+                                  ["Wolfe Releasing",60000  ],
+                                  ["Cinedigm",63328.57143  ],
+                                  ["First Look Studios",68000  ],
+                                  ["Drafthouse Films",68200  ],
+                                  ["Image Entertainment",69966.66667  ],
+                                  ["First Run Features",70412.5  ],
+                                  ["IndieVest Pictures",72200  ],
+                                  ["Cohen Media Group",81400  ],
+                                  ["Rada Film Group",94000  ],
+                                  ["Variance Films",97622.22222  ],
+                                  ["Red Flag Releasing",99900  ],
+                                  ["Area 23a",100000  ],
+                                  ["Benaroya Pictures",100000  ],
+                                  ["Independent Films",100000  ],
+                                  ["New Films International",100000  ],
+                                  ["The Cinema Guild",100000  ],
+                                  ["Cinema Guild",116066.6667  ],
+                                  ["Hannover House",135866.6667  ],
+                                  ["Abramorama",140166.6667  ],
+                                  ["The Film Arcade",166666.6667  ],
+                                  ["Amplify Releasing",200000  ],
+                                  ["Dimension Films",200000  ],
+                                  ["Focus World",200000  ],
+                                  ["Kino International",200000  ],
+                                  ["Midwest Films",200000  ],
+                                  ["New Yorker Films",200000  ],
+                                  ["Producers Distribution Agency",200000  ],
+                                  ["Radius",200000  ],
+                                  ["Vitagraph Films",200000  ],
+                                  ["International Film Circuit",209600  ],
+                                  ["Music Box Films",254842.8571  ],
+                                  ["Paladin",267257.1429  ],
+                                  ["Arthouse Pictures",300000  ],
+                                  ["First Independent Pictures",300000  ],
+                                  ["Ketchup Entertainment",300000  ],
+                                  ["Zeitgeist Films",351366.6667  ],
+                                  ["Samuel Goldwyn",357091.6667  ],
+                                  ["Entertainment One",362860  ],
+                                  ["ATO Pictures",400000  ],
+                                  ["Barbossa",400000  ],
+                                  ["Blue Collar Releasing",400000  ],
+                                  ["Liberty Studios",400000  ],
+                                  ["Loki Films",400000  ],
+                                  ["Independent Pictures",406000  ],
+                                  ["AfterDark Films",500000  ],
+                                  ["Crane Movie Company",500000  ],
+                                  ["Slowhand Releasing",500000  ],
+                                  ["Sundance Selects",500000  ],
+                                  ["Yari Film Group",500000  ],
+                                  ["Anchor Bay",511980.7241  ],
+                                  ["Oscilloscope",524241.1765  ],
+                                  ["Screen Media Ventures",577650  ],
+                                  ["Magnolia",606555.9074  ],
+                                  ["National Geographic",650000  ],
+                                  ["Exclusive Releasing",700000  ],
+                                  ["High Top Releasing",700000  ],
+                                  ["Vlader Company",700000  ],
+                                  ["Gathr Films",800000  ],
+                                  ["BOND360",900000  ],
+                                  ["IFC",906522.2069  ],
+                                  ["Milennium Entertainment",968855.5556  ],
+                                  ["Radius-TWC",997715.3846  ],
+                                  ["Monica Beach Enterprises",1000000  ],
+                                  ["RCR Distribution",1000000  ],
+                                  ["SModcast Pictures",1000000  ],
+                                  ["Visio Entertainment",1000000  ],
+                                  ["Five & Two Pictures",1100000  ],
+                                  ["Indomina Media",1100000  ],
+                                  ["Yash Raj Films",1200000  ],
+                                  ["Rocky Mountain Pictures",1299175  ],
+                                  ["IDP",1412566.667  ],
+                                  ["Newmarket Films",1550000  ],
+                                  ["Arenas Entertainment",1600000  ],
+                                  ["First Look Pictures",1600000  ],
+                                  ["Freestyle Releasing",1697992.857  ],
+                                  ["Strategic Films",1800000  ],
+                                  ["Roadside Attraction",2134032.258  ],
+                                  ["Echolight Studios",2200000  ],
+                                  ["Eros Entertainment",2500000  ],
+                                  ["Sydney Kimmel Entertainment",3000000  ],
+                                  ["Vivendi Entertainment",3233333.333  ],
+                                  ["Atlas Distribution",3300000  ],
+                                  ["Arc Entertainment",3400000  ],
+                                  ["Fox Walden",3932200  ],
+                                  ["LD Entertainment",4100000  ],
+                                  ["Icon Entertainment",4400000  ],
+                                  ["Steamboat Rock",4400000  ],
+                                  ["Codeblack Entertainment",4450000  ],
+                                  ["A24",5226216.667  ],
+                                  ["Pantelion Films",5600000  ],
+                                  ["Apparition",6100000  ],
+                                  ["Fox Atomic",6300000  ],
+                                  ["Chicago Releasing",6800000  ],
+                                  ["Drafthouse Recommends",8100000  ],
+                                  ["Weinstein Company",12167725  ],
+                                  ["Disneynature",15400000  ],
+                                  ["Film District",16366666.67  ],
+                                  ["Fox Searchlight",16643833.33  ],
+                                  ["s",17500000  ],
+                                  ["Focus Features",19432406.9  ],
+                                  ["CBS Films",19841666.67  ],
+                                  ["Miramax",20325000  ],
+                                  ["The Weinstein Company",20918337.5  ],
+                                  ["Touchstone Pictures",22784541.67  ],
+                                  ["Open Road",25364285.71  ],
+                                  ["Buena Vista",25550000  ],
+                                  ["Picturehouse Entertainment",26800000  ],
+                                  ["Overture Films",27477777.78  ],
+                                  ["Rogue Pictures",27575000  ],
+                                  ["IMAX",27700000  ],
+                                  ["Screen Gems",30250000  ],
+                                  ["The Film District",30372727.27  ],
+                                  ["FilmBuff",31352760  ],
+                                  ["Relativity Media",31384210.53  ],
+                                  ["Sherwood Pictures",33500000  ],
+                                  ["New Line Cinema",39242857.14  ],
+                                  ["Lionsgate",49905595.45  ],
+                                  ["TriStar",50400000  ],
+                                  ["Twentieth Century Fox",54800000  ],
+                                  ["Sony",55302910  ],
+                                  ["Summit",61451724.14  ],
+                                  ["Universal",75495121.95  ],
+                                  ["20th Century Fox",76286025.64  ],
+                                  ["MGM",78716666.67  ],
+                                  ["Dreamworks",92218181.82  ],
+                                  ["Columbia Pictures",93188888.89  ],
+                                  ["Paramount",100890277.8  ],
+                                  ["Warner Bros.",101578946.8  ],
+                                  {
+                                    name: 'Walt Disney Pictures',
+                                    y: 143408492.2,
+                                    sliced: true,
+                                    selected: true
+                                  },
+                                  ["Others",null  ]
+                                ]
+                    }]
+                });
+            });
+
+        });
+		</script>
+	</head>
+
+	<body>
+		<script type="text/javascript" src="{{ url_for('static', filename='js/highcharts.js')}}"></script>
+		<script type="text/javascript" src="{{ url_for('static', filename='js/modules/exporting.js')}}"></script>
+		<script type="text/javascript" src="{{ url_for('static', filename='js/themes/dark-unica.js')}}"></script>
+		
+        <a href="{{ url_for('charts') }}" style="color: #0000FF; font-size: 16px; font-weight: bold">Back to Data Charts</a><br><br>
+        <br><br>
+        <div id="container" style="min-width: 310px; max-width: 1350px; height: 700px; margin: 0 auto"></div>
+
+	</body>
+</html>

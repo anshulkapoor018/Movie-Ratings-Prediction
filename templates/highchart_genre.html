@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>4A भविष्यवाणी</title>
+		
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<style type="text/css"></style>
+		
+		<script type="text/javascript">
+      $(function () {
+          $('#container').highcharts({
+              chart: {
+                  zoomType: 'xy'
+              },
+              title: {
+                  text: 'Box Office Success with respect to Genres'
+              },
+
+              xAxis: {
+                  categories: ['Action', 'Adventure', 'Animation', 'Biography', 'Comedy', 'Crime', 'Documentary', 'Drama', 'Fantasy', 'History', 'Horror', 'Musical', 'Mystery', 'Romance', 'Sci-Fi', 'Sport', 'Thriller', 'Western'],
+                  title: {
+                      text: 'Genre'
+                  }
+              },
+              yAxis: [{ // Primary yAxis
+                  title: {
+                      text: 'Box Office',
+                      style: {
+                          color: Highcharts.getOptions().colors[0]
+                      }
+                  },
+                  labels: {
+                      format: '{value} millions',
+                      style: {
+                          color: Highcharts.getOptions().colors[0]
+                      }
+                  },
+                  min: 0,
+                  max: 800000000,
+                  tickInterval: 100000000
+
+              }, { // Secondary yAxis
+                  title: {
+                      text: 'Number of Movies',
+                      style: {
+                          color: Highcharts.getOptions().colors[1]
+                      }
+                  },
+                  labels: {
+                      format: '{value}',
+                      style: {
+                          color: Highcharts.getOptions().colors[1]
+                      }
+                  },
+                  min: 0,
+                  max: 400,
+                  tickInterval: 50,
+                  opposite: true
+              }],
+              
+              plotOptions: {
+                  bar: {
+                      dataLabels: {
+                          enabled: true
+                      }
+                  }
+              },
+              legend: {
+                  layout: 'vertical',
+                  align: 'right',
+                  verticalAlign: 'top',
+                  x: -70,
+                  y: 70,
+                  floating: true,
+                  borderWidth: 1,
+                  backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+                  shadow: true
+              },
+              credits: {
+                  enabled: false
+              },
+              series: [{
+                  name: 'Average: Box Office',
+                  type: 'column',
+                  color: 'green',
+                  tooltip: {
+                  valueSuffix: ' millions'
+              },
+                  data: [84121041.48, 101250996.4, 153952631.6, 36660022, 29356348.52, 21002796.93, 3173852.659, 18634692.59, 22580500, 1000000, 29251746.15, 100000, 75483333.33, 40300, 157489633.3, 200000, 3067850, 162800000]
+              }, {
+                  name: 'Max: Box Office',
+                  type: 'column',
+                  color: 'red',
+                  tooltip: {
+                  valueSuffix: ' millions'
+              },
+                  data: [760500000, 424600000, 415000000, 255500000, 277300000, 150100000, 117200000, 191400000, 62500000, 1000000, 137400000, 100000, 127000000, 40300, 408000000, 200000, 17200000, 162800000]
+              }, {
+                  name: 'Number of Movies: Box Office',
+                  type: 'spline',
+                  color: 'blue',
+                  tooltip: {
+                  valueSuffix: ''
+              },
+                  yAxis: 1,
+                  data: [229, 55, 57, 50, 345, 58, 167, 258, 5, 1, 52, 1, 6, 1, 3, 1, 6, 1]
+              }]
+          });
+      });
+		</script>
+	</head>
+
+	<body>
+		<script type="text/javascript" src="{{ url_for('static', filename='js/highcharts.js')}}"></script>
+		<script type="text/javascript" src="{{ url_for('static', filename='js/modules/exporting.js')}}"></script>
+  
+        <a href="{{ url_for('charts') }}" style="color: #0000FF; font-size: 16px; font-weight: bold">Back to Data Charts</a><br><br>
+        <div id="container" style="min-width: 310px; max-width: 1350px; height: 700px; margin: 0 auto"></div>
+
+	</body>
+</html>

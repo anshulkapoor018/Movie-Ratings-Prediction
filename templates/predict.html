@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>4A भविष्यवाणी</title>
+		
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<style type="text/css"></style>
+		 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css')}} "/>
+		
+		<script type="text/javascript">
+			$(function () {
+
+			$('#container').highcharts({
+
+				chart: {
+					type: 'gauge',
+					plotBackgroundColor: null,
+					plotBackgroundImage: null,
+					plotBorderWidth: 0,
+					plotShadow: false
+				},
+
+				title: {
+					text: 'Box Office Revenue Indicator'
+				},
+
+				pane: {
+					startAngle: -150,
+					endAngle: 150,
+					background: [{
+						backgroundColor: {
+							linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
+							stops: [
+								[0, '#FFF'],
+								[1, '#333']
+							]
+						},
+						borderWidth: 0,
+						outerRadius: '109%'
+					}, {
+						backgroundColor: {
+							linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
+							stops: [
+								[0, '#333'],
+								[1, '#FFF']
+							]
+						},
+						borderWidth: 1,
+						outerRadius: '107%'
+					}, {
+						// default background
+					}, {
+						backgroundColor: '#DDD',
+						borderWidth: 0,
+						outerRadius: '105%',
+						innerRadius: '103%'
+					}]
+				},
+
+				// the value axis
+				yAxis: {
+					min: 0,
+					max: 100000000,
+
+					minorTickInterval: 'auto',
+					minorTickWidth: 1,
+					minorTickLength: 10,
+					minorTickPosition: 'inside',
+					minorTickColor: '#666',
+
+					tickPixelInterval: 30,
+					tickWidth: 2,
+					tickPosition: 'inside',
+					tickLength: 10,
+					tickColor: '#666',
+					labels: {
+						step: 2,
+						rotation: 'auto'
+					},
+					title: {
+						text: '$'
+					},
+					plotBands: [{
+						from: 0,
+						to: 200000,
+						color: '#B62121' // dark red
+					}, {
+						from: 200000,
+						to: 5000000,
+						color: '#FB0000' // red
+					}, {
+						from: 5000000,
+						to: 20000000,
+						color: '#FBBE00' // orange
+					}, {
+						from: 20000000,
+						to: 40000000,
+						color: '#FDFF00' // yellow
+					}, {
+						from: 40000000,
+						to: 80000000,
+						color: '#3CFF00' // green
+					}, {
+						from: 80000000,
+						to: 760500000,
+						color: '#00B8FF' // blue
+					}]
+				},
+
+				series: [{
+					name: 'Box Office Revenue',
+			    {% block content %}
+					data: [{{ high_chart }}],
+
+					tooltip: {
+						valuePrefix: '$ ',
+						valueSuffix: ' million'
+					}
+				}]
+			},
+				// Add some life
+
+				});
+		});
+		</script>
+	</head>
+
+	<body>
+		<script type="text/javascript" src="{{ url_for('static', filename='js/highcharts.js')}}"></script>
+		<script type="text/javascript" src="{{ url_for('static', filename='js/highcharts-more.js')}}"></script>
+		<script type="text/javascript" src="{{ url_for('static', filename='js/modules/exporting.js')}}"></script>
+		<script type="text/javascript" src="{{ url_for('static', filename='js/modules/solid-gauge.src.js')}}"></script>
+		
+        <a href="{{ url_for('homepage') }}" style="color: #0000FF; font-size: 26px; font-weight: bold">Predict Another One</a><br><br>
+			
+        <div class="container" style="margin: 0 auto">
+			    <p style = "font-size: 46px; text-align: center"> {{ title }} </p>
+				<ul style="list-style-type: none; display: flex">
+                    <li><p style="margin: 0px auto; width: 350px; padding-top: 10px; font-weight: bold; font-size: 18px">Movie Plot :: {{ plot }}</p></li>
+                    <li><img src="{{ p }}" style="width:250px;height:300px"; alt="{{ p }}"></li>
+				</ul>
+                </div><br><hr>
+				<div style="width: 100%; margin: 0 auto;overflow: auto;">
+					<h2 style="font-weight:bold;color: white; text-align: center; margin-left:20px; margin-top: 5px">***Movie Details***</h2>
+                    <ul style="list-style-type: none; display: flex">
+                        <li><p style = "text-shadow: #EEEE00 0 0 40px; font-size: 20px" >Predictive Rating :: {{ result }}</p></li>
+                        <li><p style = "font-weight: bold; padding-top: 7px" >Actors :: {{ actor }}</p></li>
+                        <li><p style = "font-weight: bold; padding-top: 7px">Director :: {{ director1 }}</p></li>
+                        <li><p style = "font-weight: bold; padding-top: 7px">Awards :: {{ a }}</p></li>
+                        <li><p style = "text-shadow: #EEEE00 0 0 40px; font-size: 20px">IMDBRating ::{{ r }}</p></li>
+                    </ul>
+				</div>
+			{% endblock %}
+		</div><br>
+	</body>
+</html>
